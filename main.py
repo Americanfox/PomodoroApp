@@ -11,7 +11,6 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
 timer = None
-
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
     window.after_cancel(timer)
@@ -20,10 +19,6 @@ def reset_timer():
     check.config(text=" ")
     global reps
     reps = 0
-
-
-
-
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     global reps
@@ -41,7 +36,6 @@ def start_timer():
     else:
         countdown(work_sec)
         timer_label.config(text="Time to Work")
-
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def countdown(count):
 
@@ -63,9 +57,6 @@ def countdown(count):
         for _ in range(work_sessions):
             marks += "✔"
             check.config(text=marks)
-
-
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
@@ -94,7 +85,3 @@ reset = Button(text="Reset", bg=YELLOW, fg=RED, font=(FONT_NAME, 15, "bold"), hi
 reset.grid(column=2, row=2)
 
 window.mainloop()
-
-# fg to color background
-# ✔
-#TODO: Day 28 took 1 hour and 35 minutes to complete
